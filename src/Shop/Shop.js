@@ -4,6 +4,10 @@ import { ShopItem } from "./ShopItem";
 import Button from "./Button";
 function Shop () {
     const [itemShop, setItemShop] = useState(dataShop);
+    const [products, setProducts] = useState(dataShop);
+    const allProducts =()=> {
+        setProducts(products)
+    }
     const chosenBtn =(forSearch)=> {
         const newChosenBtn = dataShop.filter(element => element.forSearch ===forSearch)
         setItemShop(newChosenBtn)
@@ -12,7 +16,8 @@ function Shop () {
     return (
         <div>
             <Button 
-            propForSearch={chosenBtn}/>
+            propForSearch={chosenBtn}
+            propForAll={allProducts}/>
             <ShopItem propForShopItem={itemShop}/>
         </div>
     )

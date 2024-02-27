@@ -1,12 +1,11 @@
-import { useState } from "react";
-function Button ({propForSearch}) {
-    const [isActive, setIsActive] = useState(false);
-    const changeClass = () => {
-        setIsActive(! isActive)
-        }
-    
+
+import { dataShop } from "./dataShop";
+
+function Button ({propForSearch, propForAll}) {
     return(
         <div className="shop-wrap">
+            <button className="btn"
+            onClick={() => propForAll(dataShop)}>All</button>
             <button className='btn'
             onClick={() => propForSearch("dress")}>Dresses</button>
             <button className="btn" 
