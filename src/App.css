@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: #3a3c3e;
+  font-family: "Open Sans", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shop-wrap{
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shop-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.shop-title {
+  width: 300px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shop-img {
+  width: 300px;
+}
+.shop-price {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.btn-wrap {
+  margin-top: 100px;
+  display: flex;
+  justify-content:space-between
+}
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: transparent;
+  color: #3a3c3e;
+  border-color: transparent;
+  border-bottom: 1px solid #3a3c3e;
+  cursor: pointer;
+}
+.active {
+  color: red;
+}
+.default {
+  color: #3a3c3e;
 }
